@@ -1,0 +1,4 @@
+interface:
+  display_name: "Linear Implement Issue"
+  short_description: "Implement Linear issues end-to-end"
+  default_prompt: "Use $linear-implement-issue to read a Linear issue, implement it, update statuses, and open a PR to develop."
