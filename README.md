@@ -22,6 +22,7 @@ Implements a Linear issue end to end:
 - moves the issue to `In Progress` when coding starts
 - implements and validates the change
 - opens a pull request to `develop`
+- adds the pull request back to the Linear issue
 - moves the issue to `In Review` when ready
 
 Files:

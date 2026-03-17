@@ -1,6 +1,6 @@
 ---
 name: linear-implement-issue
-description: Use when the user wants to implement a Linear issue from a Linear link or issue identifier. Read the issue with the Linear MCP, move it to In Progress when implementation starts, complete the code changes in the target repository, move it to In Review when finished, and open a pull request to the develop branch when the repository workflow allows it.
+description: Use when the user wants to implement a Linear issue from a Linear link or issue identifier. Read the issue with the Linear MCP, move it to In Progress when implementation starts, complete the code changes in the target repository, open a pull request to the develop branch, add that pull request back to the Linear issue, and move the issue to In Review when finished.
 ---
 
 # Linear Implement Issue
@@ -34,10 +34,11 @@ This skill handles the full execution flow for a Linear-driven implementation ta
    - Create or reuse a working branch with the `codex/` prefix when a new branch is needed.
    - Push the branch if the remote is available.
    - Open a pull request targeting `develop`.
+   - Add the PR URL to the Linear issue once the PR exists. Prefer attaching it directly to the issue with the Linear MCP issue update tools.
    - Include the Linear issue identifier in the branch, commit, or PR body when it fits the repo conventions.
 
 7. Move the issue to `In Review` after implementation is complete.
-   Do this after local validation succeeds and the PR is opened, or after the code is otherwise ready for review if PR creation is blocked.
+   Do this after local validation succeeds, the PR is opened, and the PR is attached to the Linear issue, or after the code is otherwise ready for review if PR creation is blocked.
 
 8. Report the outcome.
    In the final handoff, include:
@@ -49,6 +50,7 @@ This skill handles the full execution flow for a Linear-driven implementation ta
 ## Operational Rules
 
 - Use Linear MCP as the source of truth for the issue state and description.
+- When a PR is created, add it to the Linear issue before moving the issue to `In Review`.
 - If Linear MCP access is unavailable, stop before code changes and report the blocker.
 - If the target repository is not a git repository, or PR creation is not possible because remote/auth is missing, still complete the implementation when possible and state the exact blocker.
 - Do not skip the status transitions unless the user explicitly asks you not to update Linear.
