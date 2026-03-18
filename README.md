@@ -40,7 +40,16 @@ git clone git@github.com:emmalabs/agent-skills.git ~/Projects/agent-skills
 
 Then make the skill available to Codex from `$CODEX_HOME/skills`.
 
-Option 1: symlink individual skills
+### Option 0: symlink via script (recommended)
+
+This repo includes an idempotent helper that creates/updates the symlink(s) under `$CODEX_HOME/skills` (defaulting to `~/.codex`):
+
+```bash
+cd ~/Projects/agent-skills
+./create-codex-symlinks.sh
+```
+
+### Option 1: symlink individual skills
 
 ```bash
 mkdir -p "$CODEX_HOME/skills"

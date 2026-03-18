@@ -1,0 +1,15 @@
+.DS_Store
+.codex/
+node_modules/
+dist/
+build/
+.env
+.env.*
+*.log
+
+# Common local tooling artifacts
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+
