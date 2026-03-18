@@ -25,9 +25,11 @@ This skill handles the full execution flow for a Linear-driven implementation ta
 
 4. Move the issue to `In Progress` when implementation starts.
    Change the Linear issue state immediately before the first code edit, not earlier during pure investigation.
+   - Immediately after the status transition, post a Linear comment summarizing what will be done next (and any assumptions made).
 
 5. Implement the change end to end.
    Read the relevant code, make the changes, and run the most relevant validation available for that repository.
+   - After any substantive intermediate milestone (e.g., code changes applied, tests/build started/completed, key decisions), post a Linear comment with: milestone summary, what was executed, and links/log excerpts when available.
 
 6. Prepare the branch and PR.
    Use a non-interactive git workflow.
@@ -35,9 +37,12 @@ This skill handles the full execution flow for a Linear-driven implementation ta
    - Push the branch if the remote is available.
    - Open a pull request targeting `develop`.
    - Include the Linear issue identifier in the branch, commit, or PR body when it fits the repo conventions.
+   - After branch creation/push and after PR creation (or PR failure), post a Linear comment including the branch name and the PR URL (or the concrete blocker reason).
+   - IMPORTANT: Ensure PRs are still explicitly linked into Linear as PR “resources” (using the Linear MCP's PR-linking capability if available). Posting a comment with a PR URL must not be the only mechanism relied upon to make PR appear under Linear “Resources”.
 
 7. Move the issue to `In Review` after implementation is complete.
    Do this after local validation succeeds and the PR is opened, or after the code is otherwise ready for review if PR creation is blocked.
+   - Immediately after moving to `In Review`, post a final Linear comment summarizing what changed, what validation ran, and where to review.
 
 8. Report the outcome.
    In the final handoff, include:
@@ -54,6 +59,16 @@ This skill handles the full execution flow for a Linear-driven implementation ta
 - Do not skip the status transitions unless the user explicitly asks you not to update Linear.
 - Prefer the repository's existing `AGENTS.md` guidance for testing, formatting, comments, and commit conventions.
 - Do not use interactive git commands.
+- Post a Linear comment for any "important intermediate action", defined as:
+  - status transitions (`In Progress`, `In Review`)
+  - code edit milestones (major files/components touched, notable refactors)
+  - validation milestones (build/test commands run and their outcomes)
+  - PR/branch milestones (branch created/pushed, PR opened, or PR blocked)
+
+- Comment size/format constraints (to avoid interfering with Linear resource rendering):
+  - Keep comments short (prefer 3-10 lines); do not paste long logs or full command output.
+  - If including URLs, include only stable links (e.g. Linear PR URL, CI summary link). Do not include large payloads.
+  - Do not use comments as a substitute for explicit PR/resource linking; PRs must be linked via the Linear MCP PR-linking step (when available).
 
 ## Typical Trigger Phrases
 
