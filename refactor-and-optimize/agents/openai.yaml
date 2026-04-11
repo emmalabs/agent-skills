@@ -1,4 +1,4 @@
 interface:
   display_name: "Refactor And Optimize"
-  short_description: "Review and refactor for clarity, SOLID practices, naming, and safe deduplication"
-  default_prompt: "Use $refactor-and-optimize to review this code for clarity, SOLID alignment, naming, and proportionate comments; then restructure safely, keep it concise, and remove duplication without changing behavior unless I say otherwise."
+  short_description: "Review and refactor: dead code, spaghetti, simple APIs; UI: reuse components/classes, nested SCSS, HTML/CSS cleanup"
+  default_prompt: "Use $refactor-and-optimize: first find and remove dead code, simplify spaghetti control flow, and delete needless indirection; only then extract or add structure. Prefer minimal, generic interfaces and methods. For HTML/CSS/SCSS: clean unused markup and styles, reuse existing components and classes, nest SCSS under the component root. Review for clarity, SOLID alignment, naming, and proportionate comments; restructure safely without changing behavior unless I say otherwise. Prefer net fewer lines in the touched files."
