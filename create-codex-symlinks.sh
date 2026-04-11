@@ -44,6 +44,6 @@ link_skill() {
 }
 
 link_skill "linear-implement-issue"
+link_skill "refactor-and-optimize"
 
 echo "Done. Codex skills are available in: ${SKILLS_DIR}"
-

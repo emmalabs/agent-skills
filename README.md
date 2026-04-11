@@ -30,6 +30,20 @@ Files:
 - [linear-implement-issue/SKILL.md](/home/aleix/Projects/agent-skills/linear-implement-issue/SKILL.md)
 - [linear-implement-issue/agents/openai.yaml](/home/aleix/Projects/agent-skills/linear-implement-issue/agents/openai.yaml)
 
+### `refactor-and-optimize`
+
+Handles safe code cleanup and code-level simplification work:
+
+- preserves behavior while restructuring code
+- reduces duplication and simplifies large modules
+- keeps implementations concise without hiding intent
+- avoids runtime or product performance tuning
+
+Files:
+
+- [refactor-and-optimize/SKILL.md](/home/aleix/Projects/agent-skills/refactor-and-optimize/SKILL.md)
+- [refactor-and-optimize/agents/openai.yaml](/home/aleix/Projects/agent-skills/refactor-and-optimize/agents/openai.yaml)
+
 ## Setup
 
 Clone this repository on each machine:
@@ -54,6 +68,7 @@ cd ~/Projects/agent-skills
 ```bash
 mkdir -p "$CODEX_HOME/skills"
 ln -s ~/Projects/agent-skills/linear-implement-issue "$CODEX_HOME/skills/linear-implement-issue"
+ln -s ~/Projects/agent-skills/refactor-and-optimize "$CODEX_HOME/skills/refactor-and-optimize"
 ```
 
 Option 2: copy the skill folder

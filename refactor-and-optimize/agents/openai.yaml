@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refactor And Optimize"
+  short_description: "Review and refactor for clarity, SOLID practices, naming, and safe deduplication"
+  default_prompt: "Use $refactor-and-optimize to review this code for clarity, SOLID alignment, naming, and proportionate comments; then restructure safely, keep it concise, and remove duplication without changing behavior unless I say otherwise."
